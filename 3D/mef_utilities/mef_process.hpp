@@ -54,7 +54,7 @@ void create_local_K(Matrix* K, int element_id, Mesh* M){
     product_matrix_by_matrix(&A,&B,&res1);
     product_matrix_by_matrix(&At,&res1,&res2);
     product_matrix_by_matrix(&Bt,&res2,&res3);
-    product_scalar_by_matrix(k*Area/(J*J),&res3,3,3,K);
+    product_scalar_by_matrix(k*Area/(J*J),&res3,4,4,K);
 
     //cout << "\t\tLocal matrix created for Element " << element_id+1 << ": "; K->show(); cout << "\n";
 }
