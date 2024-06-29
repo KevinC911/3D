@@ -46,7 +46,6 @@ void read_input(string filename, Mesh* M){
         dat_file >> id;
         M->insert_neumann_condition(new Condition(M->get_node(id-1), T_hat), i);
     }
-    cout << "Esto los lee bien";
 
     dat_file.close();
 }
